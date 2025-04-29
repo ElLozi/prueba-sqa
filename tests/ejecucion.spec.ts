@@ -11,7 +11,7 @@ test('Prueba técnica automatización ', async ({ page }) => {
   await page.goto('https://sanangel.com.co/');
 
   // Producto 1: Versalles
-  await homePage.clickProduct('Versalles');
+  await homePage.clickProduct('Baldado de amor');
   await productPage.setQuantity(2);
   await productPage.addToCartAndGoToCheckout();
 
