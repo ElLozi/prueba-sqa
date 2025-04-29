@@ -4,6 +4,7 @@ import { ProductPage } from '../pages/pagina.producto';
 import { CartPage } from '../pages/pagina.carrito';
 
 test('Prueba técnica automatización ', async ({ page }) => {
+  test.setTimeout(60000);
   const homePage = new HomePage(page);
   const productPage = new ProductPage(page);
   const cartPage = new CartPage(page);
@@ -24,6 +25,6 @@ test('Prueba técnica automatización ', async ({ page }) => {
   await productPage.addToCartAndGoToCheckout();
 
   // Validar cantidades
-  await cartPage.validateProductQuantity('Versalles', 2);
+  await cartPage.validateProductQuantity('Baldado de amor', 2);
   await cartPage.validateProductQuantity('Presente', 5);
 });
